@@ -9,6 +9,9 @@ package arrays.easy;
 
 public class RemoveDupFromSortedArray {
 
+	/*I am checking the current element with the next element, if both are equal shifting remaining array elements to the left and reducing the
+      array index size by 1. Once all the elements are done returning new index which is array size after deleting duplicate elements.*/
+	/* The problem with this solution is that for every duplicate eleement we are shifting all the remaining elements */
 	public static int removeDuplicates(int[] A,int N) {
 		for(int i=0;i<N-1;i++) {
 			if(A[i] == A[i+1]) {
@@ -22,6 +25,12 @@ public class RemoveDupFromSortedArray {
 		}
 		return N;
 	}
+	
+	//Using two pointers
+	/* 	Take a variable i as 0;
+		Use a for loop by using a variable ‘j’ from 1 to length of the array.
+		If arr[j] != arr[i], increase ‘i’ and update arr[i] == arr[j].
+	 	After completion of the loop return i+1, i.e size of the array of unique elements.*/
 	
 	public static int removeDup(int[] A,int N) {
 		 int i = 0;
