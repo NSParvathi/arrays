@@ -10,7 +10,7 @@ import java.util.Arrays;
  * @author Sravani
  *
  */
-public class recursiveInsertionSort {
+public class RecursiveInsertionSort1 {
 
 	public static void recursion(int[] arr,int i, int n ) {
 		if(i==n)
